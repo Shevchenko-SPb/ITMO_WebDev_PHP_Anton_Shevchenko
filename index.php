@@ -1,16 +1,52 @@
 <?php
-$hello = "Hello world!";
-$float = 4.44;
-$integer = 33;
-$flag = false;
-$null = null;
-$string = "";
-$stringWithNumber = "0";
-$array = [];
+//var_dump($_GET);
+//
+//$action =  empty($_GET['action'])? 'default': $_GET['action'];
+//
+//var_dump($action);
+//
+//if (empty($_GET["action"])) {
+//    $action = "default";
+//} else {
+//    $action = $_GET["action"];
+//}
+//var_dump($action);
 
-$data = array($hello,$float,$integer,$flag,$null,$string,$stringWithNumber,$array);
+//var_dump($_GET["status"]);
+//
+//switch ($_GET["status"]) {
+//    case 1:
+//        echo "new game";
+//        break;
+//    case "1":
+//        echo "new game2";
+//        break;
+//    case 2:
+//        echo "save game";
+//        break;
+//    case 3:
+//        echo "close game";
+//        break;
+//}
 
-foreach ($data as $value) {
-    var_dump(boolval($value));
+//$obj = new StdClass();
+//$obj->name = 'Hello';
+//
+//$output = "";
+//$action = "default";
+//function render($output, $str='!')
+//{
+//    $output = $output . $str;
+//}
+//
+//render($obj);
+//print($obj->name);
+
+$call = "render";
+function render () {
+    print("Чтото");
 }
-?>
+render();
+$call();
+"render"();
+
