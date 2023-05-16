@@ -1,52 +1,66 @@
 <?php
-//var_dump($_GET);
-//
-//$action =  empty($_GET['action'])? 'default': $_GET['action'];
-//
-//var_dump($action);
-//
-//if (empty($_GET["action"])) {
-//    $action = "default";
-//} else {
-//    $action = $_GET["action"];
-//}
-//var_dump($action);
 
-//var_dump($_GET["status"]);
-//
-//switch ($_GET["status"]) {
+// var_dump($_GET);
+
+$action =  empty($_GET['action'])? 'default':  $_GET['action'];
+
+// var_dump($action);
+
+// var_dump($_GET['status']);
+
+// switch ($_GET['status']) {
 //    case 1:
-//        echo "new game";
-//        break;
-//    case "1":
-//        echo "new game2";
-//        break;
+//       echo "Новая игра";
+//       break;
+//    case '1':
+//       echo "Новая игра";
+//       break;
 //    case 2:
-//        echo "save game";
-//        break;
+//       echo "Сохранить игру";
+//       break;
 //    case 3:
-//        echo "close game";
-//        break;
-//}
-
-//$obj = new StdClass();
-//$obj->name = 'Hello';
-//
-//$output = "";
-//$action = "default";
-//function render($output, $str='!')
-//{
+//       echo "Выход из  игры";
+//       break;
+//    }
+// $obj = new StdClass();
+// $obj->name =  'Hello';
+// $output = "";
+// function render(&$output, $str='!') {
 //    $output = $output . $str;
-//}
-//
-//render($obj);
-//print($obj->name);
+// }
+// function about($output) {
+//    print("Страница о нас!");
+// }
+// // render($output,'Hello');
+// // render($output, ' World');
+// $action($output);
+// print($output);
 
-$call = "render";
-function render () {
-    print("Чтото");
+
+
+// if (empty($_GET['action'])) {
+//    $action =  'default';
+
+// } else {
+//    $action = $_GET['action'];
+// }
+
+
+
+
+$x = 10;
+$y = 20;
+if (isset($y)){
+    print("ddd");
+}   else {
+    print("Help");
 }
-render();
-$call();
-"render"();
 
+
+// function render($x)  {
+//       if is_null($x) return NULL
+//      print("Что то ! ");
+
+// }
+// $call = render();
+// var_dump($call == NULL);
