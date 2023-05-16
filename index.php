@@ -57,6 +57,9 @@ print getPathOfAlias("
 PhpstormProjects.ITMO_WebDev_PHP_Anton_Shevchenko.index.php");
 
 ## Переменное число параметров функции (устаревший способ)
+
+
+
 function myecho()
 {
     foreach (func_get_args() as $v) {
