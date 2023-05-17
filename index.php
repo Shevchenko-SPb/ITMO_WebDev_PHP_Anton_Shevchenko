@@ -47,41 +47,51 @@ function factorial ($x) {
     return $x === 0 ? 1 : $x * factorial($x - 1);
 }
 print factorial(7);
+print "</br>";
 
 // Fifth task
 
-function getPathOfAlias ($convertPath) {
-    return realpath($convertPath);
-}
-print getPathOfAlias("
-PhpstormProjects.ITMO_WebDev_PHP_Anton_Shevchenko.index.php");
-
-## Переменное число параметров функции (устаревший способ)
 
 
-
-function myecho()
-{
-    foreach (func_get_args() as $v) {
-        print ("$v </br>");
+function getPathOfAlias ($url) {
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+        $url = str_replace('.','\\',$url);
+        echo $url;
+    } else {
+        $url = str_replace('.','/',$url);
+        echo $url;
     }
 }
+$url = 'root.components';
+getPathOfAlias($url);
 
-// Отображаем строки одну под другой
-myecho("Меркурий", "Венера", "Земля", "Марс");
 
-function silly()
-{
-    $i = mt_rand(); // записывает в $i случайное число
-    echo "$i<br />"; // выводит его на экран
-// Эта $i не имеет к глобальной $i никакого отношения!
-}
-for ($i = 0; $i != 10; $i++) silly();
 
-$a = 5;
-function test()
-{
-    global $a;
-    return $a = 10;
-}
-print test();
+
+
+# examples:
+//function myecho()
+//{
+//    foreach (func_get_args() as $v) {
+//        print ("$v </br>");
+//    }
+//}
+//
+//// Отображаем строки одну под другой
+//myecho("Меркурий", "Венера", "Земля", "Марс");
+//
+//function silly()
+//{
+//    $i = mt_rand(); // записывает в $i случайное число
+//    echo "$i<br />"; // выводит его на экран
+//// Эта $i не имеет к глобальной $i никакого отношения!
+//}
+//for ($i = 0; $i != 10; $i++) silly();
+//
+//$a = 5;
+//function test()
+//{
+//    global $a;
+//    return $a = 10;
+//}
+//print test();
