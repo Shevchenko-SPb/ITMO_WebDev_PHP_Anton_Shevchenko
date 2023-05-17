@@ -1,26 +1,41 @@
 <?php
-
-
 session_start();
+session_regenerate_id();
+session_id();
 
-$login = 'admin';
-$passwd = '123';
+$user_login = $_POST["login"];
+$user_password = $_POST["password"];
 
-$user_login = $_POST['login'];
-$user_passwd = $_POST['passwd'];
+$file = "user_DATA.csv";
+$passwordBase = file_get_contents($file);
+$arrayUserDATA = explode(";", $passwordBase);
 
-if ($user_login !== $login || $user_passwd !== $passwd) {
-
-    echo 'Login or password is incorrect! Please input try again!';
-    usleep(4000);
-    header('Location: ./index.php');
-} else if (!($user_login && $user_passwd)) {
-    echo 'Login or password is empty! Please input both.';
-    usleep(4000);
-    header('Location: ./index.php');
+if ($user_login == "admin" &&
+    in_array($user_login, $arrayUserDATA) &&
+    in_array(md5($user_password), $arrayUserDATA)
+) { $_SESSION['is_auth'] = true;
+    header("Location: ./admin.php");
+} elseif (
+    in_array($user_login, $arrayUserDATA) &&
+    in_array(md5($user_password), $arrayUserDATA)
+) { $_SESSION['is_auth'] = true;
+    header("Location: ./user.php");
+} elseif (
+    in_array($user_login, $arrayUserDATA) ||
+    in_array(md5($user_password), $arrayUserDATA)
+) { $_SESSION['is_auth'] = false;
+    echo "Неправильный логин или пароль!";
 } else {
-    $_SESSION['is_auth'] = true;
-    $_SESSION['str'] = 'sdafasdfsdf';
-    echo 'All is right!';
-    header('Location: ./admin.php');
+    $uniqId = uniqid();
+    $user_passwordMD5 = md5($user_password);
+    $data1 = "$uniqId;";
+    $data2 = "$user_login;";
+    $data3 = "$user_passwordMD5;";
+    $data4 = session_id();
+    $data5 = "\r\n";
+    file_put_contents(
+        $file,
+        $data1 . $data2 . $data3 . $data4 . $data5,
+        FILE_APPEND
+    );
 }

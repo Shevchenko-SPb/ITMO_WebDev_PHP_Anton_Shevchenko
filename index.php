@@ -1,10 +1,17 @@
 <?php
 session_start();
+$count = 0;
+if (isset($_COOKIE['count'])) {
+    $count = ($_COOKIE['count']) + 1;
+}
+setcookie('count', $count, time() + 3600);
+
 echo "<form action='login.php' method='POST'>
 <input name='login'></input>
-<input name='passwd'></input>
+<input name='password'></input>
 <button>Login</button>
 </form>";
-// # https://phpabstract.ru/php/19
-// #https://www.php.net/manual/ru/reserved.variables.cookies.php
-// #https://www.php.net/manual/ru/features.cookies.php$_COOKIE["name"] -->
+
+
+echo "Вы посетили страницу: $count раз.";
+
