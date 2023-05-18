@@ -1,14 +1,17 @@
 <?php
 session_start();
 session_regenerate_id();
-session_id();
+$sessionUserId = session_id();
 
 $user_login = $_POST["login"];
 $user_password = $_POST["password"];
 
 $file = "user_DATA.csv";
 $passwordBase = file_get_contents($file);
+
 $arrayUserDATA = explode(";", $passwordBase);
+var_dump($arrayUserDATA);
+
 
 if ($user_login == "admin" &&
     in_array($user_login, $arrayUserDATA) &&
@@ -31,11 +34,11 @@ if ($user_login == "admin" &&
     $data1 = "$uniqId;";
     $data2 = "$user_login;";
     $data3 = "$user_passwordMD5;";
-    $data4 = session_id();
-    $data5 = "\r\n";
+    $data4 = "$sessionUserId\r\n";
+
     file_put_contents(
         $file,
-        $data1 . $data2 . $data3 . $data4 . $data5,
+        $data1 . $data2 . $data3 . $data4,
         FILE_APPEND
     );
 }
