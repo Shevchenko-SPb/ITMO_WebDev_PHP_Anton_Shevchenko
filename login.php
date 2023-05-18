@@ -3,6 +3,7 @@ session_start();
 session_regenerate_id();
 $sessionUserId = session_id();
 
+
 $user_login = $_POST["login"];
 $user_password = $_POST["password"];
 
@@ -11,7 +12,6 @@ $passwordBase = file_get_contents($file);
 
 $arrayUserDATA = explode(";", $passwordBase);
 var_dump($arrayUserDATA);
-
 
 if ($user_login == "admin" &&
     in_array($user_login, $arrayUserDATA) &&
