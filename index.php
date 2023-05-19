@@ -1,16 +1,19 @@
 <?php
+$size = "large";
+$var_array = array("title" => "Моя домашняя страница",
+    "content"  => "medium",
+    "footer" => "@2003");
 
+extract($var_array);
 
-
-
-
-
-//session_start();
-//echo "<form action='login.php' method='POST'>
-//<input name='login'></input>
-//<input name='passwd'></input>
-//<button>Login</button>
-//</form>";
-// # https://phpabstract.ru/php/19
-// #https://www.php.net/manual/ru/reserved.variables.cookies.php
-// #https://www.php.net/manual/ru/features.cookies.php$_COOKIE["name"] -->
+$fullpath = "./template/layout.html";
+if (file_exists($fullpath) ) {
+    ob_start();
+    include $fullpath;
+    #$page = !$output?ob_get_clean():true;
+    $page = ob_get_clean();
+} else {
+    throw new Exception("File does't exist!", 1);
+}
+echo $page;
+//manual/ru/features.cookies.php$_COOKIE["name"] -->
