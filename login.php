@@ -15,9 +15,6 @@ $user_password = $_POST["password"];
 $passwordBase = file($file_User_DATA);
 $salt = "-45dfeHK/";
 
-$sessionKey = true;
-$_SESSION["is_auth"] = $sessionKey;
-
 
 if (isset($_POST['Login'])) {
     loginUser();
@@ -32,9 +29,7 @@ function loginUser()
         $user_password,
         $user_login,
         $Token,
-           $sessionKey,
         $salt,
-           $Key,
         $file_User_DATA;
     foreach ($passwordBase as &$value) {
         $passwords = explode(";", $value);
@@ -58,8 +53,7 @@ function loginUser()
     file_put_contents($file_User_DATA, $passwordBase);
     echo "Неправильный логин или пароль!";
 }
-$_SESSION["is_auth"] = $sessionKey;
-var_dump($_SESSION["is_auth"]);
+
 function registrationUser()
 {
     global $passwordBase, $user_login, $user_password;
