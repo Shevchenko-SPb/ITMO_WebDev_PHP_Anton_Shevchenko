@@ -9,36 +9,19 @@ $userSession = str_replace(
     $userSessionId . $_SERVER["REMOTE_ADDR"] . $_SERVER["HTTP_USER_AGENT"]
 );
 $Token = str_replace(";", ",", $userSession);
-
 $file_User_DATA = "user_DATA.csv";
 $user_login = $_POST["login"];
 $user_password = $_POST["password"];
-
 $passwordBase = file($file_User_DATA);
 $salt = "-45dfeHK/";
 
-if (isset($_POST['action'])) {
-    switch ($_POST['action']) {
-        case 'insert':
-            insert();
-            break;
-        case 'select':
-            select();
-            break;
-    }
+if (isset($_POST['Login'])) {
+    loginUser();
+}
+else if (isset($_POST['Registration'])) {
+    registrationUser ();
 }
 
-function select() {
-    echo "The select function is called.";
-    exit;
-}
-
-function insert() {
-    echo "The insert function is called.";
-    exit;
-}
-
-loginUser();
 function loginUser()
 {
     global $passwordBase,
@@ -46,6 +29,7 @@ function loginUser()
         $user_login,
         $Token,
         $salt,
+           $Key,
         $file_User_DATA;
     foreach ($passwordBase as &$value) {
         $passwords = explode(";", $value);
@@ -54,15 +38,16 @@ function loginUser()
             $passwords[2] == sha1($user_password . $salt)
         ) {
             if ($user_login == "admin") {
-                $_SESSION["is_auth"] = true;
                 $passwords[3] = "$Token\r\n";
                 $value = implode(";", $passwords);
                 header("Location: ./admin.php");
+                break;
             } else {
                 $_SESSION["is_auth"] = true;
                 $passwords[3] = "$Token\r\n";
                 $value = implode(";", $passwords);
                 header("Location: ./user.php");
+                break;
             }
         }
     }
@@ -70,7 +55,6 @@ function loginUser()
     echo "Неправильный логин или пароль!";
 }
 
-//registrationUser () ;
 function registrationUser()
 {
     global $passwordBase, $user_login, $user_password;
