@@ -6,7 +6,7 @@ $var_array = array("title" => "Моя домашняя страница",
 
 extract($var_array);
 
-$fullpath = "./template/layout.html";
+$fullpath = "./template/fileUpload.html";
 if (file_exists($fullpath) ) {
     ob_start();
     include $fullpath;
