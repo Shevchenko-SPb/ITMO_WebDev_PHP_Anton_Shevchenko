@@ -2,40 +2,44 @@
 
 // Task 1
 
-$directory = "./testDirectory/";
-
-function catalog ($dir)
-{
-    if (is_dir($dir)) {
-        if ($dh = opendir($dir)) {
-            while (($file = readdir($dh)) == true) {
-                if (is_dir($file)) {
-                    var_dump(filetype($file));
-                    echo "<br>";
-                }
-            }
-        }
+class ShopProduct {
+    private $title;
+    protected $price;
+    public $type = "product";
+    public $shelfLife = "12 month";
+    function showAll () {
+        echo "$this->price <br>";
+        echo "$this->title <br>";
+        echo "$this->type <br>";
+        echo "$this->shelfLife <br>";
     }
 }
-catalog($directory);
+$obj = new ShopProduct();
+
+
+$obj->showAll();
 
 // Task 2
+class NewShopProduct extends ShopProduct {
+    function showAllNew () {
+        echo "$this->price <br>";
+        echo "$this->title <br>";
+        echo "$this->type <br>";
+        echo "$this->shelfLife <br>";
+    }
+    static function showAllNewStatic () {
+        echo "price <br>";
+        echo "title <br>";
+        echo "type <br>";
+        echo "shelfLife <br>";
+    }
+}
 
-//include "template/index.html";
+$obj2 = new NewShopProduct();
+$obj2->showAllNew();
+
 
 // Task 3
 
-//function getPathOfAlias($url) {
-//    if (isset($url)){
-//        var_dump("true");
-//    return (realpath($url));}
-//    else {
-//        var_dump("false");
-//        return false;
-//    }
-//}
-//getPathOfAlias($directory);
-//
-//function import($directory) {
-//
-//}
+$static = NewShopProduct::showAllNewStatic();
+
