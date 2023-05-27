@@ -1,21 +1,19 @@
 <?php
 
+require './core/autoloader.php';
 
-var_dump($_GET['controller']);
-var_dump($_GET['action']);
-//exit(0);
-$controller = $_GET['controller'];
-$controller_class = './controller' . ucfirst($controller) . '.php';
-$action = $_GET['action'];
-
-require_once $controller_class;
+$controller = $_GET['r'] ?? 'main';
+$action = $_GET['action'] ?? 'index';
+$controller = ucfirst($controller);
+$ctrl  = new $controller();
+$ctrl -> $action();
 
 
-$obj = new $controller('a', 'b');
-$obj->$action();
 
-//$obj = new Page(True, "Это подвал");
-// $obj1 = new Page('Это заголовок 1' , "Это подвал 1");
-// //$obj2 = new Page();
-// echo $obj->header();
-//Page::footer();
+//$obj = new Page();
+//var_dump($obj->index());
+
+#https://www.php.net/manual/ru/language.oop5.autoload.php
+#https://rmcreative.ru/blog/post/mvc-front-controller-controller-i-router
+
+#Соглашение по именованию файлов и классов.
