@@ -1,19 +1,18 @@
 <?php
 
-require './core/autoloader.php';
 
-$controller = $_GET['r'] ?? 'main';
-$action = $_GET['action'] ?? 'index';
-$controller = ucfirst($controller);
-$ctrl  = new $controller();
-$ctrl -> $action();
+spl_autoload_register(function ($class_name) {
+    $file = __DIR__."\\".str_replace('\\', DIRECTORY_SEPARATOR, $class_name).'.php';
+        if (file_exists($file)){
+            require $file;
+            return true;
+        }
+});
 
+use lib1 as lt1;
+use lib2 as lt2;
 
+$obj = new lt1\app();
+$obj = new lt2\app();
 
-//$obj = new Page();
-//var_dump($obj->index());
-
-#https://www.php.net/manual/ru/language.oop5.autoload.php
-#https://rmcreative.ru/blog/post/mvc-front-controller-controller-i-router
-
-#Соглашение по именованию файлов и классов.
+var_dump(__NAMESPACE__);

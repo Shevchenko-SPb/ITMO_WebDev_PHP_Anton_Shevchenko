@@ -1,5 +1,7 @@
 <?php
 
+use core\View;
+
 require_once("view.php");
 
 class About  {

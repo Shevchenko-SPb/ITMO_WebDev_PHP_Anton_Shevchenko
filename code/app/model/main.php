@@ -1,5 +1,6 @@
 <?php
 
+namespace app\model;
 class ModelMain
 {
     public function __construct($title, $content)
@@ -7,8 +8,9 @@ class ModelMain
         $this->title = $title;
         $this->content = $content;
     }
+
     public function getDate()
     {
-        return array('title'=>$this->title, 'content'=>$this->content);
+        return array('title' => $this->title, 'content' => $this->content);
     }
 }

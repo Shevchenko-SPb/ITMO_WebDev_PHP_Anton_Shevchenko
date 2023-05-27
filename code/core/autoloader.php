@@ -1,5 +1,5 @@
 <?php
-
+namespace core;
 define ("CTRL" , __DIR__.'/../app/controller/');
 define ("MDL" , __DIR__.'/../app/model/');
 define ("VW" , __DIR__.'/../app/view/');
@@ -23,3 +23,4 @@ class Autoloader
     }
 }
 Autoloader::register();
+var_dump(__NAMESPACE__);
