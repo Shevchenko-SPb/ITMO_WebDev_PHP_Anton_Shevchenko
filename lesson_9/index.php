@@ -1,6 +1,6 @@
 <?php
 define('ROOT', dirname(__FILE__));
-
+require_once('./core/autoloader.php');
 class Router {
     // Хранит конфигурацию маршрутов.
     private $routes;
@@ -28,7 +28,6 @@ class Router {
     function run(){
         // Получаем URI.
         $uri = $this->getURI();
- 
         // Пытаемся применить к нему правила из конфигуации.
         foreach($this->routes as $pattern => $route){
             // Если правило совпало.
@@ -37,7 +36,6 @@ class Router {
                 $internalRoute = preg_replace("~$pattern~", $route, $uri);
                 // Разбиваем внутренний путь на сегменты.
                 $segments = explode('/', $internalRoute);
-     
                 // Первый сегмент — контроллер.
                 $controller = ucfirst(array_shift($segments)).'Controller';
                 // Второй — действие.
@@ -45,38 +43,18 @@ class Router {
                 // Остальные сегменты — параметры.
                 $parameters = $segments;
  
-                // Подключаем файл контроллера, если он имеется
                 $controllerFile = ROOT.'/app/controllers/'.$controller.'.php';
-                
-
-                // var_dump($controller);
-                // var_dump($action);
-                // var_dump($controllerFile);
                 if(file_exists($controllerFile)){
-                    //print("include file");
                     include($controllerFile);
                 }
-                var_dump($controllerFile);
-                // Если не загружен нужный класс контроллера или в нём нет
-                // нужного метода — 404 
-                // if(!is_callable(array($controller, $action))){
-                //     header("HTTP/1.0 404 Not Found");
-                //     return;
-                // }
-         
-                // Вызываем действие контроллера с параметрами
-                // var_dump($controller);
-                // var_dump($action);
-                // var_dump($params);
-
-                
+                // var_dump($controllerFile);
                 $obj = new $controller();
                 $obj->$action();
+                // var_dump($obj);
+                // var_dump($action);
                 call_user_func_array(array($controller, $action), $params);
             }
         }
- 
-        
         // Ничего не применилось. 404.
         header("HTTP/1.0 404 Not Found");
         return;

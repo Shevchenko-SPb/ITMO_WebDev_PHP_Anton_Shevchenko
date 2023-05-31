@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5fcf6ca-4e2e-4781-8084-f11cdee4dabc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ITMO_WebDev_PHP_Anton_Shevchenko.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/controller/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/model/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/app/template/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/core/autoloader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/core/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/dir1/MyClass1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/dir2/MyClass2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/template/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllerAbout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllerMain.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_8/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_8/app/controllers/AppController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_8/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_8/routes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib1/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib2/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php8.2\php.exe" />
+  <component name="ProjectId" id="2PhNP24QpbDAjGG8gKv02UoG4Ie" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lessons/lesson-9-PHP&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Shevchenko\\PhpstormProjects\\ITMO_WebDev_PHP_Anton_Shevchenko\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shevchenko\PhpstormProjects\ITMO_WebDev_PHP_Anton_Shevchenko\code" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5fcf6ca-4e2e-4781-8084-f11cdee4dabc" name="Changes" comment="" />
+      <created>1683905331766</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683905331766</updated>
+      <workItem from="1683905332822" duration="4346000" />
+      <workItem from="1683910756490" duration="723000" />
+      <workItem from="1683911498224" duration="7414000" />
+      <workItem from="1683961405928" duration="9637000" />
+      <workItem from="1684171074340" duration="15979000" />
+      <workItem from="1684229175920" duration="3483000" />
+      <workItem from="1684245165815" duration="141000" />
+      <workItem from="1684251547977" duration="6853000" />
+      <workItem from="1684315710079" duration="50000" />
+      <workItem from="1684315768217" duration="418000" />
+      <workItem from="1684316200705" duration="2641000" />
+      <workItem from="1684322056164" duration="26290000" />
+      <workItem from="1684403194100" duration="3169000" />
+      <workItem from="1684412764840" duration="1080000" />
+      <workItem from="1684424070318" duration="7757000" />
+      <workItem from="1684479332843" duration="23607000" />
+      <workItem from="1684517263275" duration="3412000" />
+      <workItem from="1684566143172" duration="3104000" />
+      <workItem from="1684573349489" duration="3373000" />
+      <workItem from="1684675806542" duration="12346000" />
+      <workItem from="1684760509364" duration="80000" />
+      <workItem from="1684766500923" duration="6000" />
+      <workItem from="1684768048710" duration="11657000" />
+      <workItem from="1684856421346" duration="4389000" />
+      <workItem from="1684907539073" duration="2000" />
+      <workItem from="1684929814569" duration="185000" />
+      <workItem from="1684930021797" duration="5000" />
+      <workItem from="1684941721655" duration="5118000" />
+      <workItem from="1685171779078" duration="10051000" />
+      <workItem from="1685195637217" duration="496000" />
+      <workItem from="1685460495884" duration="5955000" />
+      <workItem from="1685524574536" duration="87000" />
+      <workItem from="1685524684275" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
